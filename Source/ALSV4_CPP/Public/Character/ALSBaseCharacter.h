@@ -177,7 +177,7 @@ public:
 
 	/** Input */
 
-	UPROPERTY(BlueprintAssignable, Category = "ALS|Input")
+	UPROPERTY(BlueprintCallable, BlueprintAssignable, Category = "ALS|Input")
 	FJumpPressedSignature JumpPressedDelegate;
 
 	UPROPERTY(BlueprintAssignable, Category = "ALS|Input")

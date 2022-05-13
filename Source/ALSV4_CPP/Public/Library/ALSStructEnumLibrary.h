@@ -180,7 +180,7 @@ public:
 		Left_ = MovementDirection == EALSMovementDirection::Left;
 		Backward_ = MovementDirection == EALSMovementDirection::Backward;
 	}
-};
+};	
 
 USTRUCT(BlueprintType)
 struct FALSMovementAction
@@ -320,6 +320,9 @@ private:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true), Category = "ALS|Character States")
 	bool Barrel_ = false;
 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = true), Category = "ALS|Character States")
+	bool Sword_ = false;
+
 public:
 	FALSOverlayState()
 	{
@@ -340,6 +343,7 @@ public:
 	const bool& Binoculars() const { return Binoculars_; }
 	const bool& Box() const { return Box_; }
 	const bool& Barrel() const { return Barrel_; }
+	const bool& Sword() const { return Sword_; }
 
 	operator EALSOverlayState() const { return State; }
 
@@ -359,6 +363,7 @@ public:
 		Binoculars_ = State == EALSOverlayState::Binoculars;
 		Box_ = State == EALSOverlayState::Box;
 		Barrel_ = State == EALSOverlayState::Barrel;
+		Sword_ = State == EALSOverlayState::Sword;
 	}
 };
 

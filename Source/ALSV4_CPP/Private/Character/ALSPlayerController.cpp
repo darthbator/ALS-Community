@@ -84,6 +84,7 @@ void AALSPlayerController::BindActions(UInputMappingContext* Context)
 			for (const UInputAction* UniqueAction : UniqueActions)
 			{
 				EnhancedInputComponent->BindAction(UniqueAction, ETriggerEvent::Triggered, Cast<UObject>(this), UniqueAction->GetFName());
+				EnhancedInputComponent->BindActionValue(UniqueAction);
 			}
 		}
 	}
